@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday, Bunny 💗</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+:root{--pink:#ff8db5;--rose:#e95b8e;--deep:#8f3158;--cream:#fff7fa;--text:#61394b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(145deg,#fff9fc,#ffeaf3 45%,#fff2f8);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+#hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}.float{position:absolute;bottom:-60px;opacity:0;animation:rise linear forwards;color:#ff9bc1;text-shadow:0 0 12px #ffc5dc}.float:nth-child(odd){color:#ffd0e4}@keyframes rise{0%{transform:translateY(0) rotate(0);opacity:0}10%{opacity:.55}85%{opacity:.35}100%{transform:translateY(-115vh) rotate(35deg);opacity:0}}
+main{position:relative;z-index:1}.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px 20px;position:relative}.hero:before,.hero:after{content:'';position:absolute;width:260px;height:260px;border-radius:50%;filter:blur(70px);opacity:.35;z-index:-1}.hero:before{background:#ffc2db;left:4%;top:14%}.hero:after{background:#f6b6d0;right:5%;bottom:9%}.hero-content{max-width:760px}.eyebrow{letter-spacing:.28em;text-transform:uppercase;font-size:.73rem;color:#bd648a;margin-bottom:22px}.hero h1{font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(3rem,9vw,6.8rem);line-height:1.04;margin:0;color:#9c3c65}.hero h1 em{font-weight:400;color:#e46d9d}.subtitle{font-size:1.08rem;color:#81566a;margin:25px auto 35px;max-width:470px;line-height:1.8}.heartbeat{display:inline-block;animation:beat 1.5s infinite}@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.2)}30%{transform:scale(1)}45%{transform:scale(1.12)}}.btn{border:0;background:linear-gradient(135deg,#e95b8e,#f79abb);color:white;padding:14px 26px;border-radius:999px;font:500 1rem 'DM Sans';cursor:pointer;box-shadow:0 10px 24px #e88db77a;transition:transform .25s,box-shadow .25s}.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px #e88db799}.scrollhint{position:absolute;bottom:26px;font-size:.8rem;color:#b77b96;letter-spacing:.1em}.scrollhint span{display:block;margin-top:8px;animation:down 1.5s infinite}@keyframes down{50%{transform:translateY(6px)}}
+section{padding:90px 20px;max-width:900px;margin:auto}.section-label{text-transform:uppercase;letter-spacing:.22em;color:#bf6b90;font-size:.72rem;text-align:center}.section-title{font:400 clamp(2rem,5vw,3.4rem) 'Playfair Display',serif;text-align:center;color:#923a62;margin:15px 0 25px}.intro-card{max-width:700px;margin:0 auto;background:#ffffffa8;border:1px solid #ffd5e6;border-radius:28px;padding:clamp(25px,5vw,48px);box-shadow:0 20px 60px #eaa7c31c;text-align:center;backdrop-filter:blur(8px)}.intro-card p{font-size:1.05rem;line-height:1.95;margin:0;color:#795366}.intro-card p+p{margin-top:18px}.divider-heart{color:#e875a1;font-size:1.5rem;margin:26px 0}
+.story{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:45px}.story-card{background:#fff8fb;border:1px solid #ffd8e8;border-radius:22px;padding:26px 22px;transition:transform .3s,box-shadow .3s}.story-card:hover{transform:translateY(-6px);box-shadow:0 18px 38px #e8a5bf30}.story-card .icon{font-size:1.8rem}.story-card h3{font:500 1.35rem 'Playfair Display',serif;color:#a44a70;margin:15px 0 10px}.story-card p{font-size:.95rem;line-height:1.8;color:#80596d;margin:0}
+.note{position:relative;max-width:680px;margin:45px auto 0;padding:38px 34px;background:linear-gradient(140deg,#fff4f9,#ffe7f2);border-radius:26px;border:1px solid #ffc8df;text-align:center}.note:before{content:'✧';position:absolute;top:14px;left:20px;color:#e881a7}.note:after{content:'✧';position:absolute;bottom:14px;right:20px;color:#e881a7}.note p{font:italic 1.4rem/1.9 'Playfair Display',serif;color:#985071;margin:0}
+.final{padding:95px 20px 120px;text-align:center}.final h2{font:400 clamp(2.3rem,6vw,4.5rem) 'Playfair Display',serif;color:#9b3c66;margin:16px 0}.final p{line-height:1.9;color:#81566a;max-width:560px;margin:0 auto 28px}.signature{font:italic 1.2rem 'Playfair Display',serif;color:#c05e87;margin-top:28px}.footer{font-size:.78rem;color:#b7859c;margin-top:50px}.hidden-message{display:none;margin:24px auto 0;max-width:520px;padding:24px;border-radius:20px;background:#fff9fc;border:1px solid #f8c5dd;animation:fadein .8s ease}.hidden-message.show{display:block}@keyframes fadein{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:700px){.story{grid-template-columns:1fr}.hero h1{font-size:3.5rem}.story-card{text-align:center}.note p{font-size:1.15rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div id="hearts" aria-hidden="true"></div>
+<main>
+  <div class="hero" id="top">
+    <div class="hero-content">
+      <div class="eyebrow">a little page made with a lot of heart</div>
+      <h1>Happy Birthday,<br><em>Vaishali</em> <span class="heartbeat">♡</span></h1>
+      <p class="subtitle">To the girl who somehow made an ordinary day at CIRR feel like the beginning of something special.</p>
+      <button class="btn" onclick="document.querySelector('#message').scrollIntoView({behavior:'smooth'})">A little birthday note ✨</button>
+    </div>
+    <div class="scrollhint">scroll a little<span>⌄</span></div>
+  </div>
+
+  <section id="message">
+    <div class="section-label">for my bunny</div>
+    <h2 class="section-title">Some people just feel different.</h2>
+    <div class="intro-card">
+      <p>At first, I was just being myself—calm, a little nonchalant, and not really expecting anything out of the ordinary. Then there was you.</p>
+      <p>Somewhere between our conversations and the way you carry yourself, I started noticing little things. The way you talk. The way you are so effortlessly yourself. Your smile, your looks—honestly, they're unfair. And somehow, the more I got to know you, the more I wanted to.</p>
+      <div class="divider-heart">♡</div>
+      <p>It's funny how a meeting at an event can turn into a memory you keep replaying. You were coordinating, I was an intern… and I didn't expect that meeting to leave me with this much warmth in my heart.</p>
+    </div>
+    <div class="story">
+      <article class="story-card"><div class="icon">🌷</div><h3>Your way of talking</h3><p>There's something about the way you talk that makes me want to listen a little longer—even when the conversation is about the simplest things.</p></article>
+      <article class="story-card"><div class="icon">✨</div><h3>Your kind of magic</h3><p>You don't have to try too hard to stand out. The way you carry yourself and the way you are, just naturally, is more than enough.</p></article>
+      <article class="story-card"><div class="icon">🐰</div><h3>My Bunny</h3><p>Some nicknames just feel right. And somehow, Bunny became a little word that makes me smile whenever I think of you.</p></article>
+    </div>
+    <div class="note"><p>“I don't know where life takes us,<br>but I'm really glad our paths crossed.”</p></div>
+  </section>
+  <section class="final">
+    <div class="section-label">today is all yours</div>
+    <h2>Keep shining,<br><em>beautiful soul.</em></h2>
+    <p>May this year bring you the kind of happiness that sneaks up on you in the best ways, the kind of laughter that makes your cheeks hurt, beautiful surprises, peaceful days, and everything your heart quietly wishes for.</p>
+    <button class="btn" id="surpriseBtn">One more thing… 💌</button>
+    <div class="hidden-message" id="surprise">
+      <p style="font-family:'Playfair Display',serif;font-size:1.35rem;color:#9b3c66;margin:0 0 12px">Happy Birthday, Bunny! ♡</p>
+      <p style="line-height:1.8;margin:0;color:#81566a">Thank you for being you. Never lose that beautiful spark, that lovely way of speaking, or the little things that make you uniquely Vaishali. I hope today reminds you how special you are.</p>
+      <div style="font-size:1.8rem;margin-top:16px">🌸 💗 🌸</div>
+    </div>
+    <div class="signature">— someone who is happy he got to know you</div>
+    <div class="footer">made with a little blush, a lot of thought, and ♡</div>
+  </section>
+</main>
+<script>
+const heartBox=document.getElementById('hearts');
+const symbols=['♡','♥','❤','✧','💕','♡'];
+function heart(){const h=document.createElement('span');h.className='float';h.textContent=symbols[Math.floor(Math.random()*symbols.length)];h.style.left=Math.random()*100+'vw';h.style.fontSize=(12+Math.random()*25)+'px';h.style.animationDuration=(7+Math.random()*8)+'s';heartBox.appendChild(h);setTimeout(()=>h.remove(),16000)}
+setInterval(heart,650);for(let i=0;i<15;i++)setTimeout(heart,i*250);
+document.getElementById('surpriseBtn').addEventListener('click',()=>{const box=document.getElementById('surprise');box.classList.add('show');box.scrollIntoView({behavior:'smooth',block:'center'});document.getElementById('surpriseBtn').textContent='♡ Happy Birthday, Bunny ♡';});
+</script>
+</body>
+</html>
